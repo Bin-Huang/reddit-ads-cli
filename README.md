@@ -1,6 +1,6 @@
 # reddit-ads-cli
 
-A Reddit Ads CLI designed for AI agents. Wraps the official Reddit Ads API (v3) with simple, agent-friendly commands.
+Give AI agents direct access to Reddit Ads data. One command to query accounts, campaigns, ad groups, and pull performance reports -- no SDK, no docs to read, no tokens wasted on boilerplate.
 
 **Works with:** OpenClaw, Claude Code, Cursor, Codex, and any agent that can run shell commands.
 
@@ -18,7 +18,7 @@ npx reddit-ads-cli --help
 
 ## How it works
 
-This CLI is a thin wrapper around the official [Reddit Ads API v3](https://ads-api.reddit.com/docs/v3). It uses OAuth2 Bearer token authentication and returns all API responses as JSON. No transformation or aggregation.
+Built on the official [Reddit Ads API v3](https://ads-api.reddit.com/docs/v3). Handles OAuth2 token exchange automatically. Every command outputs structured JSON to stdout, ready for agents to parse without extra processing.
 
 The Reddit Ads API is open to all developers and does not require allowlisting or approval from Reddit.
 
