@@ -74,7 +74,7 @@ export REDDIT_ADS_ACCESS_TOKEN=your_access_token
 reddit-ads-cli --credentials /path/to/credentials.json accounts
 ```
 
-The `username` field is used to build the required User-Agent string (`cli:reddit-ads-cli:v0.1.0 (by /u/your_username)`). Reddit rate-limits requests without a proper User-Agent.
+The `username` field is used to build the required User-Agent string (`cli:reddit-ads-cli:v<version> (by /u/your_username)`). The version is read from `package.json` at runtime. Reddit rate-limits requests without a proper User-Agent.
 
 Credentials are resolved in this order:
 1. `--credentials <path>` flag
@@ -176,6 +176,89 @@ Options:
 - `--campaign-id <id>` -- filter by campaign ID
 - `--ad-group-id <id>` -- filter by ad group ID
 - `--timezone <tz>` -- timezone (e.g. America/New_York)
+
+### creatives
+
+List ad creatives for an ad account.
+
+```bash
+reddit-ads-cli creatives t2_abc123
+reddit-ads-cli creatives t2_abc123 --limit 50 --offset 10
+```
+
+Options:
+- `--limit <n>` -- results per page (default 25)
+- `--offset <n>` -- start index (default 0)
+
+### creative
+
+Get a specific ad creative.
+
+```bash
+reddit-ads-cli creative t2_abc123 creative_xyz
+```
+
+### custom-audiences
+
+List custom audiences for an ad account.
+
+```bash
+reddit-ads-cli custom-audiences t2_abc123
+reddit-ads-cli custom-audiences t2_abc123 --limit 50
+```
+
+Options:
+- `--limit <n>` -- results per page (default 25)
+- `--offset <n>` -- start index (default 0)
+
+### pixels
+
+List conversion pixels for an ad account.
+
+```bash
+reddit-ads-cli pixels t2_abc123
+```
+
+### pixel-events
+
+List events for a conversion pixel.
+
+```bash
+reddit-ads-cli pixel-events t2_abc123 pixel_xyz
+```
+
+### subreddits
+
+Search for subreddits available for targeting.
+
+```bash
+reddit-ads-cli subreddits --query gaming
+reddit-ads-cli subreddits --query technology --limit 50
+```
+
+Options:
+- `--query <q>` -- search query (required)
+- `--limit <n>` -- results per page (default 25)
+
+### interests
+
+List available interest targeting categories.
+
+```bash
+reddit-ads-cli interests
+```
+
+### geos
+
+List available geographic targeting options.
+
+```bash
+reddit-ads-cli geos
+reddit-ads-cli geos --query "United States"
+```
+
+Options:
+- `--query <q>` -- search query
 
 ## Error output
 
