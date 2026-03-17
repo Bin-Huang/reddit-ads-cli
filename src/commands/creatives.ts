@@ -16,7 +16,7 @@ export function registerCreativeCommands(program: Command): void {
           limit: opts.limit,
           offset: opts.offset,
         };
-        const data = await callApi(`/accounts/${accountId}/creatives`, { creds, params });
+        const data = await callApi(`/ad_accounts/${accountId}/creatives`, { creds, params });
         output(data, program.opts().format);
       } catch (err) {
         fatal((err as Error).message);
@@ -29,7 +29,7 @@ export function registerCreativeCommands(program: Command): void {
     .action(async (accountId: string, creativeId: string) => {
       try {
         const creds = loadCredentials(program.opts().credentials);
-        const data = await callApi(`/accounts/${accountId}/creatives/${creativeId}`, { creds });
+        const data = await callApi(`/ad_accounts/${accountId}/creatives/${creativeId}`, { creds });
         output(data, program.opts().format);
       } catch (err) {
         fatal((err as Error).message);

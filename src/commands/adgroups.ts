@@ -16,7 +16,7 @@ export function registerAdgroupCommands(program: Command): void {
         if (opts.campaignId) params.campaign_id = opts.campaignId;
         if (opts.status) params.status = opts.status;
         const data = await callApi(
-          `/accounts/${accountId}/ad_groups`,
+          `/ad_accounts/${accountId}/ad_groups`,
           { creds, params }
         );
         output(data, program.opts().format);

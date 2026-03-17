@@ -14,7 +14,7 @@ export function registerCampaignCommands(program: Command): void {
         const params: Record<string, string> = {};
         if (opts.status) params.status = opts.status;
         const data = await callApi(
-          `/accounts/${accountId}/campaigns`,
+          `/ad_accounts/${accountId}/campaigns`,
           { creds, params }
         );
         output(data, program.opts().format);

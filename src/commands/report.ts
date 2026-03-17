@@ -27,7 +27,7 @@ export function registerReportCommands(program: Command): void {
         if (opts.adGroupId) body.ad_group_id = opts.adGroupId;
         if (opts.timezone) body.timezone = opts.timezone;
         const data = await callApi(
-          `/accounts/${accountId}/reports`,
+          `/ad_accounts/${accountId}/reports`,
           { creds, method: "POST", body }
         );
         output(data, program.opts().format);

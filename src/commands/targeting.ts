@@ -16,7 +16,7 @@ export function registerTargetingCommands(program: Command): void {
           limit: opts.limit,
           offset: opts.offset,
         };
-        const data = await callApi(`/accounts/${accountId}/custom_audiences`, { creds, params });
+        const data = await callApi(`/ad_accounts/${accountId}/custom_audiences`, { creds, params });
         output(data, program.opts().format);
       } catch (err) {
         fatal((err as Error).message);
@@ -29,7 +29,7 @@ export function registerTargetingCommands(program: Command): void {
     .action(async (accountId: string) => {
       try {
         const creds = loadCredentials(program.opts().credentials);
-        const data = await callApi(`/accounts/${accountId}/pixels`, { creds });
+        const data = await callApi(`/ad_accounts/${accountId}/pixels`, { creds });
         output(data, program.opts().format);
       } catch (err) {
         fatal((err as Error).message);
@@ -42,7 +42,7 @@ export function registerTargetingCommands(program: Command): void {
     .action(async (accountId: string, pixelId: string) => {
       try {
         const creds = loadCredentials(program.opts().credentials);
-        const data = await callApi(`/accounts/${accountId}/pixels/${pixelId}/events`, { creds });
+        const data = await callApi(`/ad_accounts/${accountId}/pixels/${pixelId}/events`, { creds });
         output(data, program.opts().format);
       } catch (err) {
         fatal((err as Error).message);

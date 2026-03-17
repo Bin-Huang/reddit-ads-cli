@@ -18,7 +18,7 @@ export function registerAdCommands(program: Command): void {
         if (opts.campaignId) params.campaign_id = opts.campaignId;
         if (opts.status) params.status = opts.status;
         const data = await callApi(
-          `/accounts/${accountId}/ads`,
+          `/ad_accounts/${accountId}/ads`,
           { creds, params }
         );
         output(data, program.opts().format);

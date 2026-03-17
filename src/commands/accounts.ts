@@ -10,7 +10,7 @@ export function registerAccountCommands(program: Command): void {
     .action(async () => {
       try {
         const creds = loadCredentials(program.opts().credentials);
-        const data = await callApi("/me/accounts", { creds });
+        const data = await callApi("/me/ad_accounts", { creds });
         output(data, program.opts().format);
       } catch (err) {
         fatal((err as Error).message);
@@ -23,7 +23,7 @@ export function registerAccountCommands(program: Command): void {
     .action(async (accountId: string) => {
       try {
         const creds = loadCredentials(program.opts().credentials);
-        const data = await callApi(`/accounts/${accountId}`, { creds });
+        const data = await callApi(`/ad_accounts/${accountId}`, { creds });
         output(data, program.opts().format);
       } catch (err) {
         fatal((err as Error).message);
