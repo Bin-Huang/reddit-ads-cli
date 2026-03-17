@@ -67,8 +67,11 @@ cat > ~/.config/reddit-ads-cli/credentials.json << EOF
 }
 EOF
 
-# Option B: Environment variable
+# Option B: Environment variables
 export REDDIT_ADS_ACCESS_TOKEN=your_access_token
+export REDDIT_ADS_CLIENT_ID=your_client_id        # optional
+export REDDIT_ADS_CLIENT_SECRET=your_client_secret  # optional
+export REDDIT_ADS_USERNAME=your_reddit_username     # optional, for User-Agent
 
 # Option C: Pass per command
 reddit-ads-cli --credentials /path/to/credentials.json accounts
