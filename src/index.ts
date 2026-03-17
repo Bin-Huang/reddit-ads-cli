@@ -5,6 +5,8 @@ import { registerCampaignCommands } from "./commands/campaigns.js";
 import { registerAdgroupCommands } from "./commands/adgroups.js";
 import { registerAdCommands } from "./commands/ads.js";
 import { registerReportCommands } from "./commands/report.js";
+import { registerCreativeCommands } from "./commands/creatives.js";
+import { registerTargetingCommands } from "./commands/targeting.js";
 
 const program = new Command();
 
@@ -46,6 +48,8 @@ registerCampaignCommands(program);
 registerAdgroupCommands(program);
 registerAdCommands(program);
 registerReportCommands(program);
+registerCreativeCommands(program);
+registerTargetingCommands(program);
 
 program.on("command:*", (operands) => {
   process.stderr.write(

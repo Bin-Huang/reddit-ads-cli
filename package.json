@@ -1,6 +1,6 @@
 {
   "name": "reddit-ads-cli",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Reddit Ads CLI for AI agents",
   "type": "module",
   "bin": {
