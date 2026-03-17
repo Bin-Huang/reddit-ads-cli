@@ -1,6 +1,6 @@
 # reddit-ads-cli
 
-Give AI agents direct access to Reddit Ads data. One command to query accounts, campaigns, ad groups, and pull performance reports -- no SDK, no docs to read, no tokens wasted on boilerplate.
+Reddit Ads CLI for AI agents (and humans). Analyze campaign performance, explore subreddit and interest targeting options, track conversion pixels, and more.
 
 **Works with:** OpenClaw, Claude Code, Cursor, Codex, and any agent that can run shell commands.
 
