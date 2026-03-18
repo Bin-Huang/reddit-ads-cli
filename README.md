@@ -10,11 +10,7 @@ Reddit Ads CLI for AI agents (and humans). Analyze campaign performance, explore
 npm install -g reddit-ads-cli
 ```
 
-Or run directly with npx:
-
-```bash
-npx reddit-ads-cli --help
-```
+Or run directly: `npx reddit-ads-cli --help`
 
 ## How it works
 
