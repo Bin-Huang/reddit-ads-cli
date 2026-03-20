@@ -8,7 +8,7 @@ Reddit Ads CLI for AI agents (and humans). Analyze campaign performance, explore
 
 Tell your AI agent (e.g. OpenClaw):
 
-> Install the CLI and skills from https://github.com/Bin-Huang/reddit-ads-cli
+> Install this CLI and skills from https://github.com/Bin-Huang/reddit-ads-cli
 
 Or install manually:
 
