@@ -6,8 +6,17 @@ Reddit Ads CLI for AI agents (and humans). Analyze campaign performance, explore
 
 ## Installation
 
+Tell your AI agent (e.g. OpenClaw):
+
+> Install the CLI and skills from https://github.com/Bin-Huang/reddit-ads-cli
+
+Or install manually:
+
 ```bash
 npm install -g reddit-ads-cli
+
+# Add skills for AI agents (Claude Code, Cursor, Codex, etc.)
+npx skills add Bin-Huang/reddit-ads-cli
 ```
 
 Or run directly: `npx reddit-ads-cli --help`
